@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            float:center;  
+            /*background-image: url('background theme.png');*/
+            background-color:steelblue;
+             
+            }
+            h1{
+              text-align: center;
+              color:sandybrown;
+            }
+        form{
+            display:block;
+            background-color:whitesmoke;
+            width:40%;
+            height:180%;
+            padding-top:60px;
+            padding-bottom: 30px;
+            padding-left: 20px;
+            transform: translateX(400px);
+            font-size: 20px;
+            
+             }
+        input{
+            padding: 2px 0px;
+            color:blueviolet;
+            display: block;
+            float:center;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width:80%; /* Could be more or less, depending on screen size */
+            height:100%;
+           /* transform: translateX(200px);*/
+              }
+    </style>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+ <h1>LOGIN PAGE</h1> 
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  FirstName: <input type="text" name="fname">
+  LastName: <input type="text" name="lname">
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
